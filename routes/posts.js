@@ -116,7 +116,7 @@ router.get('/:id', async (req, res) => {
 
 
 // Get posts for the logged-in user
-router.get('/user', authMiddleware, async (req, res) => {
+router.get('/user/posts', authMiddleware, async (req, res) => {
     try {
         // Fetch posts created by the logged-in user
         const posts = await Post.find({ authorId: req.user.id })
