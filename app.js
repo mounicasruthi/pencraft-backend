@@ -7,6 +7,7 @@ require('dotenv').config();
 const authRoutes = require('./routes/auth');
 const postRoutes = require('./routes/posts');
 const authorRoutes = require('./routes/authors');
+const geminiRoutes = require("./routes/gemini");
 
 const app = express();
 app.use(cors());
@@ -23,6 +24,7 @@ mongoose.connect(process.env.MONGO_URI, {
 app.use('/api/auth', authRoutes);
 app.use('/api/posts', postRoutes);
 app.use('/api/authors', authorRoutes);
+app.use("/api/gemini", geminiRoutes);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
