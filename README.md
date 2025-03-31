@@ -2,6 +2,8 @@
 
 The backend of **Pencraft** is a RESTful API built with **Node.js** and **Express.js**. It handles user authentication, blog post management, and AI summarization using the Gemini API.
 
+
+Link to the frontend repo: https://github.com/mounicasruthi/pencraft
 ---
 
 ## Features
